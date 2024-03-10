@@ -1,14 +1,91 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home</title>
+    <style>
+        body,
+        html {
+            height: 100%;
+            margin: 0;
+        }
+
+        .page-content {
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        .container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 10px;
+            padding: 10px;
+            flex-grow: 1;
+            /* Ensures that the container takes up all available space */
+        }
+
+        .column {
+            padding: 10px;
+            background-color: #f2f2f2;
+            border-radius: 15px;
+        }
+
+        .column:nth-child(2) {
+            background-color: #e6e6e6;
+        }
+
+        footer {
+            padding: 20px;
+            text-align: center;
+        }
+    </style>
 </head>
+
 <body>
-    <div>
-        <h1>Sid Toriggino</h1>
-        <p> Hello, this is {{ name }}'s website!</p>
+    <div class="page-content">
+        <div class="container">
+            <div class="column">
+                <div>
+                    <h1 style="color: darkgreen;"> Sid Toriggino </h1>
+                    <p> Find me on:
+                        <a href="https://www.linkedin.com/in/sidtoriggino/">LinkedIn,</a>
+                        <a href="https://github.com/SidToriggino">GitHub</a>
+                    </p>
+                    <p><a href="sidtoriggino@gmail.com">sidtoriggino@gmail.com</a></p>
+                </div>
+            </div>
+            <div class="column">
+                <div>
+                    <h2 style="color: darkgreen;">Professional</h2>
+                    <p> I am currently a Product Manager developing data-as-a-service solutions. I have 4 years of
+                        experience
+                        running data analysis and product management for data products servicing the independent
+                        convenience retail
+                        and Consumer Packaged Goods (CPG) industry. Confident in ability to build and analyze data
+                        products that can
+                        scale for any client use case. Track record of bringing data products to market that drive
+                        8-figure revenue
+                        annually. Committed to cross functional collaboration, lifelong learning, and building toward
+                        excellence.
+                    </p>
+                </div>
+                <div>
+                    <h2 style="color: darkgreen;">Personal</h2>
+                    <p> I currently reside in Denver, Colorado where I enjoy many quintessential Colorado activities. You will often find me going on a run, fly fishing, hiking in the mountains, or at a local brewery.</p>
+                </div>
+            </div>
+        </div>
     </div>
+    <footer>
+        <p>&copy; <span id="year"></span> Sid Toriggino </p>
+    </footer>
+
+    <script>
+        document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
 </body>
+
 </html>
