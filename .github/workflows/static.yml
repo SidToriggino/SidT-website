@@ -34,7 +34,7 @@ jobs:
       - name: Prepare deployment
         run: |
           mkdir public
-          cp personal_repo/SidT-website/templates/index.html public/
+          cp SidT-website/templates/index.html public/
           # Add any other necessary files to the public directory here
 
       - name: Upload artifact
