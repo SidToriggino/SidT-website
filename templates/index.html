@@ -6,7 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home</title>
     <style>
-        body,
+        body {
+            font-family: 'Roboto', sans-serif;
+        }
+
         html {
             height: 100%;
             margin: 0;
@@ -25,6 +28,26 @@
             padding: 10px;
             flex-grow: 1;
             /* Ensures that the container takes up all available space */
+        }
+
+        /* Default to full width */
+        .left,.right {
+            width: 100%;
+        }
+
+        /* When the screen is 600px wide or more, split into two columns */
+        @media (min-width: 600px) {
+            .left,
+            .right {
+                width: 50%;
+            }
+        }
+
+        /* Optional: Clear floats after the columns */
+        .container::after {
+            content: "";
+            display: table;
+            clear: both;
         }
 
         .column {
@@ -54,13 +77,13 @@
                         <a href="https://www.linkedin.com/in/sidtoriggino/">LinkedIn,</a>
                         <a href="https://github.com/SidToriggino">GitHub</a>
                     </p>
-                    <p><a href="sidtoriggino@gmail.com">sidtoriggino@gmail.com</a></p>
+                    <a href="mailto:sidtoriggino@gmail.com">sidtoriggino@gmail.com</a>
                 </div>
             </div>
             <div class="column">
                 <div>
                     <h2 style="color: darkgreen;">Professional</h2>
-                    <p> I am currently a Product Manager developing data-as-a-service solutions. I have 4 years of
+                    <p> I am a Product Manager developing data-as-a-service solutions. I have 4 years of
                         experience
                         running data analysis and product management for data products servicing the independent
                         convenience retail
@@ -74,7 +97,10 @@
                 </div>
                 <div>
                     <h2 style="color: darkgreen;">Personal</h2>
-                    <p> I currently reside in Denver, Colorado where I enjoy many quintessential Colorado activities. You will often find me going on a run, fly fishing, hiking in the mountains, or at a local brewery.</p>
+                    <p>
+                        I currently live in Denver, Colorado. I love doing all things out doors (classic). You will
+                        often find me on a run, fly fishing, golfing, hiking in the mountains, or at a local brewery.
+                    </p>
                 </div>
             </div>
         </div>
