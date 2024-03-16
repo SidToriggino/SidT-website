@@ -23,31 +23,17 @@
 
         .container {
             display: grid;
-            grid-template-columns: 1fr 1fr;
+            grid-template-columns: 1fr;
             gap: 10px;
             padding: 10px;
             flex-grow: 1;
             /* Ensures that the container takes up all available space */
         }
 
-        /* Default to full width */
-        .left,.right {
-            width: 100%;
-        }
-
-        /* When the screen is 600px wide or more, split into two columns */
         @media (min-width: 600px) {
-            .left,
-            .right {
-                width: 50%;
+            .container {
+                grid-template-columns: 1fr 1fr;
             }
-        }
-
-        /* Optional: Clear floats after the columns */
-        .container::after {
-            content: "";
-            display: table;
-            clear: both;
         }
 
         .column {
